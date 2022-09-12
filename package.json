@@ -115,6 +115,7 @@
     "luxon": "^2.4.0",
     "memoize-one": "^6.0.0",
     "moment": "^2.29.4",
+    "moment-jalaali": "^0.9.6",
     "moment-timezone": "^0.5.34",
     "prop-types": "^15.8.1",
     "react-overlays": "^5.2.0",
@@ -123,5 +124,8 @@
   "bugs": {
     "url": "https://github.com/jquense/react-big-calendar/issues"
   },
-  "homepage": "https://github.com/jquense/react-big-calendar#readme"
+  "homepage": "https://github.com/jquense/react-big-calendar#readme",
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  }
 }
