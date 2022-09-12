@@ -1,6 +1,9 @@
 @import './variables';
 @import './reset';
-
+@import url("https://fonts.googleapis.com/css2?family=Lalezar&family=Vazirmatn:wght@200&display=swap");
+*{
+  font-family: "Vazirmatn", sans-serif !important;
+}
 .rbc-calendar {
   box-sizing: border-box;
   height: 100%;
