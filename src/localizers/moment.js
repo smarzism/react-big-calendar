@@ -40,26 +40,32 @@ const timeRangeEndFormat = ({ end }, culture, local) =>
 //   agendaTimeRangeFormat: timeRangeFormat,
 // }
 
-const defaultFormats = {
-  dateFormat: 'jDD',
-  dayFormat: 'jDD jdddd',
-  weekdayFormat: 'dddd',
+// const defStringFormats = {
+//   dateFormat: 'DD',
+//   dayFormat: 'DD dddd',
+//   weekdayFormat: 'dddd',
 
-  selectRangeFormat: timeRangeFormat,
-  eventTimeRangeFormat: timeRangeFormat,
-  eventTimeRangeStartFormat: timeRangeStartFormat,
-  eventTimeRangeEndFormat: timeRangeEndFormat,
+//   timeGutterFormat: 'LT',
 
-  timeGutterFormat: 'LTS',
+//   monthHeaderFormat: 'MMMM jYYYY',
+//   dayHeaderFormat: 'dddd DD MMMM',
 
-  monthHeaderFormat: 'jMMMM jYYYY',
-  dayHeaderFormat: 'dddd - jDD jMMMM',
-  dayRangeHeaderFormat: weekRangeFormat,
-  agendaHeaderFormat: dateRangeFormat,
+//   agendaDateFormat: 'dddd DD MMMM ',
+//   agendaTimeFormat: 'LT',
+// }
 
-  agendaDateFormat: 'dddd jDD jMMMM ',
-  agendaTimeFormat: 'LTS',
-  agendaTimeRangeFormat: timeRangeFormat,
+export const defStringFormats = {
+  dateFormat: 'DD',
+  dayFormat: 'DD ddd',
+  weekdayFormat: 'ddd',
+
+  timeGutterFormat: 'LT',
+
+  monthHeaderFormat: 'MMMM YYYY',
+  dayHeaderFormat: 'dddd MMM DD',
+
+  agendaDateFormat: 'ddd MMM DD',
+  agendaTimeFormat: 'LT',
 }
 
 function fixUnit(unit) {
@@ -82,7 +88,7 @@ const defFunctions = {
 
   agendaTimeRangeFormat: timeRangeFormat,
 }
-export default function (moment, customFormats = defaultFormats) {
+export default function (moment, customFormats = defStringFormats) {
   const locale = (m, c) => (c ? m.locale(c) : m)
 
   function getTimezoneOffset(date) {
